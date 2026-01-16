@@ -1,6 +1,6 @@
 # fzf dirs
 
-[zle widgets](https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets) + suggested options for listing/selecting directories with [fzf](https://github.com/junegunn/fzf)
+[zle widgets](https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets) for listing/selecting directories with [fzf](https://github.com/junegunn/fzf) + suggested defaults
 
 # Usage
 
@@ -15,12 +15,11 @@ bindkey '^O' fzf-dirs-zfm # default
 set `FZF_DIRS_DEFAULT_OPTS` to override `FZF_DEFAULT_OPTS` for these widgets i.e.
 
 ```zsh
-# check .lessfilter for dependencies
 export FZF_DIRS_DEFAULT_OPTS="\
 --bind '?:toggle-preview' \
 --height=90% \
 --preview-window right,100 \
---preview '$FZF_DIRS_HOME/.lessfilter {}' \
+--preview 'eza --header --long --git --color=always {}' \
 " 
 ```
 
