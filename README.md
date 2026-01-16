@@ -4,11 +4,11 @@
 
 # Usage
 
-- `fzf-dirs-recent` [dirs](https://ss64.com/bash/dirs.html)
-- `fzf-dirs-zfm` directories from [zfm](https://github.com/pabloariasal/zfm)
+- `fzf-dirs` recent directories from [dirs](https://ss64.com/bash/dirs.html)
+- `fzf-dirs-zfm` bookmarked directories from [zfm](https://github.com/pabloariasal/zfm)
 
 ```zsh
-bindkey '^E' fzf-dirs-recent # default
+bindkey '^E' fzf-dirs # default
 bindkey '^O' fzf-dirs-zfm # default
 ```
 

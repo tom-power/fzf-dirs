@@ -27,13 +27,13 @@ function __select_dir() {
     __append_to_prompt "$selected_dir"
 }
 
-function fzf-dirs-recent() {
+function fzf-dirs() {
     __dirs=$(dirs -v | uniq | tail -n +2)
     __select_dir
 }
 
-zle -N fzf-dirs-recent
-bindkey '^E' fzf-dirs-recent
+zle -N fzf-dirs
+bindkey '^E' fzf-dirs
 
 function fzf-dirs-zfm() {    
     __dirs=$(zfm list --dirs | sed -E 's/[[:space:]]*\[d\][[:space:]]*$//')
