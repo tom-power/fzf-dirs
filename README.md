@@ -4,7 +4,7 @@
 
 # Usage
 
-- `fzf-dirs` recent directories from [dirs](https://ss64.com/bash/dirs.html)
+- `fzf-dirs` recent directories from [dirs](https://ss64.com/bash/dirs.html), consider [dirpersist](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dirpersist) plugin for this
 - `fzf-dirs-zfm` bookmarked directories from [zfm](https://github.com/pabloariasal/zfm)
 
 ```zsh
