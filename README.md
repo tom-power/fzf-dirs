@@ -1,6 +1,6 @@
 # fzf dirs
 
-[zsh](https://zsh.sourceforge.io/) plugin + suggested options for selecting directories with [fzf](https://github.com/junegunn/fzf)
+[zle widgets](https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets) + suggested options for listing/selecting directories with [fzf](https://github.com/junegunn/fzf)
 
 # Usage
 
@@ -19,7 +19,7 @@ set `FZF_DIRS_DEFAULT_OPTS` to override `FZF_DEFAULT_OPTS` for these widgets i.e
 export FZF_DIRS_DEFAULT_OPTS="\
 --bind '?:toggle-preview' \
 --height=90% \
---preview-window right,100,hidden \
+--preview-window right,100 \
 --preview '$FZF_DIRS_HOME/.lessfilter {}' \
 " 
 ```
@@ -28,7 +28,7 @@ export FZF_DIRS_DEFAULT_OPTS="\
 
 Depends on [fzf](https://github.com/junegunn/fzf), [zfm](https://github.com/pabloariasal/zfm).
 
-Then install with a plugin manager of your choice or manually:
+Install with a [plugin manager](https://github.com/rossmacarthur/zsh-plugin-manager-benchmark) of your choice or manually:
 
 ```sh
 git clone https://github.com/tom-power/fzf-dirs && source fzf-dirs/fzf-dirs.plugin.zsh
