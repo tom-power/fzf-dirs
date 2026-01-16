@@ -1,0 +1,23 @@
+#! /usr/bin/env sh
+# https://github.com/Aloxaf/fzf-tab/wiki/Preview#show-file-contents
+
+ezaEmpty() {
+  all="--all"
+  if [ -z "$(ls -A $1)" ]; then
+    all="--all --all"
+  fi
+  eza --header --long $all --git --color=always "$1"
+}
+
+mime=$(file -bL --mime-type "$1")
+category=${mime%%/*}
+if [ -d "$1" ]; then
+  ezaEmpty $1
+elif [ "$category" = text ]; then
+  bat --color=always --style=numbers "$1"
+elif [ "$category" = image ]; then
+  chafa "$1"
+  exiftool "$1"
+else
+  lesspipe.sh "$1:"
+fi
