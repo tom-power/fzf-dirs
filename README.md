@@ -18,7 +18,7 @@ set `FZF_DIRS_DEFAULT_OPTS` to override `FZF_DEFAULT_OPTS` for these widgets i.e
 export FZF_DIRS_DEFAULT_OPTS="\
 --bind '?:toggle-preview' \
 --height=90% \
---preview-window right,100 \
+--preview-window right,60% \
 --preview 'eza --header --long --git --color=always {}' \
 " 
 ```
