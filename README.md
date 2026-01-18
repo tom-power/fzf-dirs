@@ -1,15 +1,19 @@
 # fzf dirs
 
-[zle widgets](https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets) for listing/selecting directories with [fzf](https://github.com/junegunn/fzf) + suggested defaults
+I like using `^O` to go a directory, and `^E` to go back to a visited directory, so wrote these [zle widgets](https://zsh.sourceforge.io/Doc/Release/Zsh-Line-Editor.html#Zle-Widgets) to help with that.
 
-# Usage
+No plans for more than that at the moment, in which case the repo name is misleading :)
 
-- `fzf-dirs` recent directories from [dirs](https://ss64.com/bash/dirs.html), consider [dirpersist](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dirpersist) plugin for this
-- `fzf-dirs-zfm` bookmarked directories from [zfm](https://github.com/pabloariasal/zfm)
+## Widgets
+
+- `fzf-dirs-zfm` list bookmarked directories from [zfm](https://github.com/pabloariasal/zfm)
+- `fzf-dirs` list recent directories from [dirs](https://ss64.com/bash/dirs.html), consider [dirpersist](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dirpersist) plugin for this
+
+## Usage
 
 ```zsh
-bindkey '^E' fzf-dirs # default
 bindkey '^O' fzf-dirs-zfm # default
+bindkey '^E' fzf-dirs # default
 ```
 
 set `FZF_DIRS_DEFAULT_OPTS` to override `FZF_DEFAULT_OPTS` for these widgets i.e.
@@ -23,7 +27,7 @@ export FZF_DIRS_DEFAULT_OPTS="\
 " 
 ```
 
-# Install
+## Install
 
 Depends on [fzf](https://github.com/junegunn/fzf), [zfm](https://github.com/pabloariasal/zfm).
 
