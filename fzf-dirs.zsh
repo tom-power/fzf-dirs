@@ -1,12 +1,12 @@
 # __append_to_prompt, __select_dir copied from
 # https://github.com/pabloariasal/zfm/blob/master/zfm.zsh
 
-function __append_to_prompt() {
+function __overwrite_to_prompt() {
     if [[ -z "$1" ]]; then
         zle reset-prompt
         return 0
     fi
-    LBUFFER="${LBUFFER}$(echo "$1" | tr -d '\r\n')"
+    LBUFFER="$(echo "$1" | tr -d '\r\n')"
     local ret=$?
     zle reset-prompt
     return $ret
@@ -24,7 +24,7 @@ function __select_dir() {
     | FZF_DEFAULT_OPTS="$@ ${opts}" fzf \
     | awk '{print $1}' \
     )"
-    __append_to_prompt "$selected_dir"
+    __overwrite_to_prompt "$selected_dir"
 }
 
 function fzf-dirs() {
